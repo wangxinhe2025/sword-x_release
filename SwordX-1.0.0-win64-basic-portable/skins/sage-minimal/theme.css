@@ -1,0 +1,514 @@
+/* wxh-skin/1 — Sage Minimal（雾山湖景 / 暖白纸张 / 鼠尾草线条） */
+:root {
+  --color-accent: #737968;
+  --color-vis: #737968;
+  --color-vis-edge: #555d4d;
+  --color-vis-peak: #30382c;
+  --color-lcd-fg: #555d4d;
+  --color-lcd-dim: #a3a79a;
+  --color-track: #30362c;
+  --color-list-text: #51574b;
+  --color-list-sel-text: #2f352b;
+  --color-list-duration: #8d9286;
+  --color-list-duration-sel: #596152;
+  --color-list-sel-bg: #a0aa9428;
+  --color-fill: #737968;
+  --menu-bg: #f2efe7;
+  --menu-fg: #4e5548;
+  --font-lcd: "Segoe UI";
+  --font-ui: "Segoe UI";
+  --font-track: "Georgia";
+  --font-title: "Georgia";
+  --menu-bg-image: url(menu/menuback.jpg);
+}
+
+[data-role="main.pause"],
+[data-role="main.play"],
+[data-role="main.stop"],
+[data-role="main.prev"],
+[data-role="main.next"],
+[data-role="main.min"],
+[data-role="main.menu"],
+[data-role="main.close"],
+[data-role="main.chip_pl"],
+[data-role="main.chip_eq"] {
+  --parent: main.window;
+}
+
+/* ===== Main window: 530px cover + 699px controls ===== */
+[data-role="main.window"] {
+  left: 0px;
+  top: 0px;
+  width: 1229px;
+  height: 530px;
+  background-image: url(windows/main_sage_minimal.png);
+  background-color: #f2efe7;
+  --board: 0px 0px 0px 0px;
+}
+
+[data-role="main.title"] {
+  left: 564px;
+  top: 24px;
+  width: 170px;
+  height: 28px;
+  color: #555d4d;
+  font-family: "Georgia";
+  font-size: 20px;
+  text-align: left;
+  vertical-align: middle;
+  content: "SWORD-X";
+  --parent: main.window;
+}
+
+[data-role="main.track"] {
+  left: 600px;
+  top: 82px;
+  width: 560px;
+  height: 62px;
+  color: #30362c;
+  font-family: "Georgia";
+  font-size: 38px;
+  text-align: left;
+  vertical-align: middle;
+  --parent: main.window;
+  --lyrics: 0;
+}
+
+[data-role="main.stream"] {
+  left: 600px;
+  top: 148px;
+  width: 560px;
+  height: 24px;
+  color: #737968;
+  font-family: "Segoe UI";
+  font-size: 17px;
+  text-align: left;
+  vertical-align: middle;
+  --parent: main.window;
+}
+
+[data-role="main.play_state"] {
+  left: 574px;
+  top: 102px;
+  width: 14px;
+  height: 14px;
+  background-image: url(leds/play_state/stopped.png);
+  --parent: main.window;
+}
+[data-role="main.play_state"]:playing {
+ background-image: url(leds/play_state/playing.png);
+}
+[data-role="main.play_state"]:paused {
+ background-image: url(leds/play_state/paused.png);
+}
+[data-role="main.play_state"]:stopped {
+ background-image: url(leds/play_state/stopped.png);
+}
+
+[data-role="main.lcd.digit-0"] { background-image: url(lcd/digit_0.png); width: 22px; height: 26px; }
+[data-role="main.lcd.digit-1"] { background-image: url(lcd/digit_1.png); width: 22px; height: 26px; }
+[data-role="main.lcd.digit-2"] { background-image: url(lcd/digit_2.png); width: 22px; height: 26px; }
+[data-role="main.lcd.digit-3"] { background-image: url(lcd/digit_3.png); width: 22px; height: 26px; }
+[data-role="main.lcd.digit-4"] { background-image: url(lcd/digit_4.png); width: 22px; height: 26px; }
+[data-role="main.lcd.digit-5"] { background-image: url(lcd/digit_5.png); width: 22px; height: 26px; }
+[data-role="main.lcd.digit-6"] { background-image: url(lcd/digit_6.png); width: 22px; height: 26px; }
+[data-role="main.lcd.digit-7"] { background-image: url(lcd/digit_7.png); width: 22px; height: 26px; }
+[data-role="main.lcd.digit-8"] { background-image: url(lcd/digit_8.png); width: 22px; height: 26px; }
+[data-role="main.lcd.digit-9"] { background-image: url(lcd/digit_9.png); width: 22px; height: 26px; }
+[data-role="main.lcd.digit-colon"] { background-image: url(lcd/digit_colon.png); width: 12px; height: 26px; }
+[data-role="main.lcd.digit-dash"] { background-image: url(lcd/digit_dash.png); width: 22px; height: 26px; }
+[data-role="main.lcd.digit-blank"] { background-image: url(lcd/digit_blank.png); width: 22px; height: 26px; }
+
+[data-role="main.vis"] {
+  left: 600px;
+  top: 288px;
+  width: 560px;
+  height: 52px;
+  color: #737968;
+  --color-vis-edge: #555d4d;
+  --parent: main.window;
+}
+
+[data-role="main.seek"] {
+  left: 600px;
+  top: 375px;
+  width: 560px;
+  height: 3px;
+  --parent: main.window;
+  --use-own-opacity: 1;
+}
+[data-role="main.seek.track"] {
+ background-image: url(sliders/seek_track.png);
+}
+[data-role="main.seek.fill"] {
+ background-image: url(sliders/seek_fill.png);
+}
+[data-role="main.seek.thumb"] {
+  width: 18px;
+  height: 18px;
+  background-image: url(sliders/seek_thumb/normal.png);
+}
+[data-role="main.seek.thumb"]:hover {
+ background-image: url(sliders/seek_thumb/hover.png);
+}
+[data-role="main.seek.thumb"]:active {
+ background-image: url(sliders/seek_thumb/pressed.png);
+}
+
+[data-role="main.play_mode"] {
+  left: 600px;
+  top: 407px;
+  width: 34px;
+  height: 34px;
+  --parent: main.window;
+  background-image: url(edited/main_play_mode/sequential.png);
+}
+[data-role="main.play_mode"]:sequential {
+ background-image: url(edited/main_play_mode/sequential.png);
+}
+[data-role="main.play_mode"]:loop-all {
+ background-image: url(edited/main_play_mode/loop_all.png);
+}
+[data-role="main.play_mode"]:shuffle {
+ background-image: url(edited/main_play_mode/shuffle.png);
+}
+[data-role="main.play_mode"]:loop-one {
+ background-image: url(edited/main_play_mode/loop_one.png);
+}
+
+[data-role="main.stop"] {
+  left: 685px;
+  top: 407px;
+  width: 34px;
+  height: 34px;
+  background-image: url(buttons/transport_stop/normal.png);
+  --parent: main.window;
+}
+[data-role="main.stop"]:hover {
+ background-image: url(buttons/transport_stop/hover.png);
+}
+[data-role="main.stop"]:active {
+ background-image: url(buttons/transport_stop/pressed.png);
+}
+
+[data-role="main.prev"] {
+  left: 754px;
+  top: 405px;
+  width: 38px;
+  height: 38px;
+  background-image: url(buttons/transport_prev/normal.png);
+  --parent: main.window;
+}
+[data-role="main.prev"]:hover {
+ background-image: url(buttons/transport_prev/hover.png);
+}
+[data-role="main.prev"]:active {
+ background-image: url(buttons/transport_prev/pressed.png);
+}
+
+[data-role="main.play"],
+[data-role="main.pause"] {
+  left: 846px;
+  top: 386px;
+  width: 56px;
+  height: 56px;
+}
+[data-role="main.play"] {
+ background-image: url(buttons/transport_play/normal.png);
+ left: 846px;
+ top: 396px;
+ --parent: main.window;
+ width: 56px;
+ height: 56px;
+}
+[data-role="main.play"]:hover {
+ background-image: url(buttons/transport_play/hover.png);
+}
+[data-role="main.play"]:active {
+ background-image: url(buttons/transport_play/pressed.png);
+}
+[data-role="main.pause"] {
+ background-image: url(buttons/transport_pause/normal.png);
+ left: 846px;
+ top: 396px;
+ width: 56px;
+ height: 56px;
+ --parent: main.window;
+}
+[data-role="main.pause"]:hover {
+ background-image: url(buttons/transport_pause/hover.png);
+}
+[data-role="main.pause"]:active {
+ background-image: url(buttons/transport_pause/pressed.png);
+}
+
+[data-role="main.next"] {
+  left: 958px;
+  top: 405px;
+  width: 38px;
+  height: 38px;
+  background-image: url(buttons/transport_next/normal.png);
+  --parent: main.window;
+}
+[data-role="main.next"]:hover {
+ background-image: url(buttons/transport_next/hover.png);
+}
+[data-role="main.next"]:active {
+ background-image: url(buttons/transport_next/pressed.png);
+}
+
+[data-role="main.chip_eq"] {
+  left: 1060px;
+  top: 407px;
+  width: 34px;
+  height: 34px;
+  background-image: url(buttons/chip_eq/normal.png);
+  --parent: main.window;
+}
+[data-role="main.chip_eq"]:hover {
+ background-image: url(buttons/chip_eq/hover.png);
+}
+[data-role="main.chip_eq"]:active {
+ background-image: url(buttons/chip_eq/pressed.png);
+}
+[data-role="main.chip_eq"]:checked {
+ background-image: url(buttons/chip_eq/checked.png);
+}
+
+[data-role="main.chip_pl"] {
+  left: 1120px;
+  top: 407px;
+  width: 34px;
+  height: 34px;
+  background-image: url(buttons/chip_pl/normal.png);
+  --parent: main.window;
+}
+[data-role="main.chip_pl"]:hover {
+ background-image: url(buttons/chip_pl/hover.png);
+}
+[data-role="main.chip_pl"]:active {
+ background-image: url(buttons/chip_pl/pressed.png);
+}
+[data-role="main.chip_pl"]:checked {
+ background-image: url(buttons/chip_pl/checked.png);
+}
+
+[data-role="main.volume_icon"] {
+  left: 930px;
+  top: 27px;
+  width: 26px;
+  height: 26px;
+  background-image: url(icons/speaker.png);
+  --parent: main.window;
+}
+
+[data-role="main.volume"] {
+  left: 970px;
+  top: 39px;
+  width: 120px;
+  height: 3px;
+  --parent: main.window;
+}
+[data-role="main.volume.track"] { background-image: url(sliders/volume_track.png); }
+[data-role="main.volume.fill"] { background-image: url(sliders/volume_fill.png); }
+[data-role="main.volume.thumb"] {
+  width: 16px;
+  height: 16px;
+  background-image: url(sliders/volume_thumb/normal.png);
+}
+[data-role="main.volume.thumb"]:active { background-image: url(sliders/volume_thumb/pressed.png); }
+
+[data-role="main.min"] {
+  left: 1127px;
+  top: 19px;
+  width: 26px;
+  height: 26px;
+  background-image: url(buttons/win_min/normal.png);
+  --parent: main.window;
+}
+[data-role="main.min"]:hover {
+ background-image: url(buttons/win_min/hover.png);
+}
+[data-role="main.min"]:active {
+ background-image: url(buttons/win_min/pressed.png);
+}
+
+[data-role="main.menu"] {
+  left: -47px;
+  top: 19px;
+  width: 26px;
+  height: 26px;
+  --pin: 1 0;
+  --origin: 1 0;
+  background-image: url(buttons/win_menu/normal.png);
+  --parent: main.window;
+}
+[data-role="main.menu"]:hover {
+ background-image: url(buttons/win_menu/hover.png);
+}
+[data-role="main.menu"]:active {
+ background-image: url(buttons/win_menu/pressed.png);
+}
+
+[data-role="main.close"] {
+  left: -19px;
+  top: 19px;
+  width: 26px;
+  height: 26px;
+  --pin: 1 0;
+  --origin: 1 0;
+  background-image: url(buttons/win_close/normal.png);
+  --parent: main.window;
+}
+[data-role="main.close"]:hover {
+ background-image: url(buttons/win_close/hover.png);
+}
+[data-role="main.close"]:active {
+ background-image: url(buttons/win_close/pressed.png);
+}
+
+[data-role="main.format"] {
+  left: 600px;
+  top: 476px;
+  width: 300px;
+  height: 24px;
+  color: #8d9286;
+  font-family: "Segoe UI";
+  font-size: 14px;
+  text-align: left;
+  vertical-align: middle;
+  --parent: main.window;
+}
+
+[data-role="main.lyrics"] {
+  left: 600px;
+  top: 177px;
+  width: 560px;
+  height: 106px;
+  color: #9b9f94;
+  --active-color: #596152;
+  --karaoke-fill: #30382c;
+  background-color: #00000000;
+  font-family: "Segoe UI";
+  font-size: 14px;
+  --lyrics-active-size: 16px;
+  --line-height: 24px;
+  text-align: left;
+  vertical-align: middle;
+  --lyrics-fade-min: 34;
+  --lyrics-fade-range: 3;
+  --karaoke: 0;
+  --lyrics-drag: 0;
+  --lyrics-nudge-side: right;
+  --parent: main.window;
+}
+
+[data-role="main.cover"] {
+  left: -3px;
+  top: -2px;
+  width: 535px;
+  height: 535px;
+  background-image: url(windows/default_landscape.jpg);
+  background-color: #d9ddd2;
+  --parent: main.window;
+}
+
+[data-role="cover.placeholder"] {
+  width: 530px;
+  height: 530px;
+  background-image: url(windows/default_landscape.jpg);
+  background-color: #d9ddd2;
+}
+
+/* ===== Playlist ===== */
+[data-role="playlist.window"] {
+  left: 0px;
+  top: 0px;
+  width: 1229px;
+  height: 730px;
+  background-image: url(windows/playlist_sage_frame.jpg);
+  background-color: #f2efe7;
+  --nine-slice: 28px 28px 28px 28px;
+  --board: 0px 0px 0px 0px;
+  --resizable: 1;
+  --dock-side: top;
+  --nine-slice-tile: 1;
+}
+
+[data-role="playlist.library"] {
+  left: 14px;
+  top: 26px;
+  width: 374px;
+  height: 700px;
+  --flex-y: grow;
+  --row-height: 140px;
+  --scrollbar-width: 6px;
+  --scrollbar-track: #d1d4ca;
+  --scrollbar-thumb: #92998a;
+  --scrollbar-thumb-hover: #596152;
+  color: #51574b;
+  --title-sel-color: #2f352b;
+  --row-sel-bg: #a0aa9428;
+  font-family: "Segoe UI";
+  font-size: 18px;
+  --avatar-size: 110px;
+  --parent: playlist.window;
+  background-image: url(playlist/library_bg.jpg);
+  --nine-slice: 24px 24px 220px 300px;
+  background-color: #00000000;
+  --flex-x: grow;
+}
+
+[data-role="playlist.splitter"] {
+  left: 388px;
+  top: 26px;
+  width: 10px;
+  height: 700px;
+  --direction: vertical;
+  --flex-y: grow;
+  --parent: playlist.window;
+  background-image: url(playlist/splitter.png);
+  --nine-slice: 24px 4px 24px 4px;
+}
+
+[data-role="playlist.list"] {
+  left: 398px;
+  top: 26px;
+  width: 819px;
+  height: 700px;
+  --flex-x: grow;
+  --flex-y: grow;
+  --row-height: 50px;
+  --scrollbar-width: 10px;
+  --scrollbar-track: #e0ded7;
+  --scrollbar-thumb: #a9ada1;
+  --scrollbar-thumb-hover: #596152;
+  color: #51574b;
+  font-family: "Segoe UI";
+  font-size: 19px;
+  --title-sel-color: #2f352b;
+  --duration-color: #8d9286;
+  --duration-sel-color: #596152;
+  --row-sel-bg: #a0aa9428;
+  --parent: playlist.window;
+  --flex-group-y: 2;
+  background-image: url(playlist/list_bg.jpg);
+  --nine-slice: 24px 394px 220px 24px;
+  background-color: #00000000;
+}
+
+[data-role="playlist.row_selected"] {
+  background-image: url(playlist/row_selected.png);
+}
+[data-role="main.duration"] {
+  color: #555d4d;
+  left: 1031px;
+  top: 349px;
+  width: 130px;
+  font-family: "Segoe UI";
+  text-align: right;
+  height: 23px;
+  font-size: 16px;
+  vertical-align: middle;
+  --parent: main.window;
+}

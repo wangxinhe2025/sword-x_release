@@ -1,0 +1,427 @@
+﻿/* wxh-skin/1 鈥?Elden Ring 2 路 Miquella (from D:\skinStyle\eldenring2) */
+:root {
+  --color-accent: #e8c878;
+  --color-vis: #ffe0a0;
+  --color-vis-edge: #d4a040;
+  --color-vis-peak: #fff6d0;
+  --color-lcd-fg: #f0d8a0;
+  --color-lcd-dim: #9a8048;
+  --color-track: #f5e0b0;
+  --color-list-text: #e0d0a8;
+  --color-list-sel-text: #fff8e0;
+  --color-list-duration: #a89058;
+  --color-list-duration-sel: #e8d090;
+  --color-list-sel-bg: #e8c87855;
+  --color-fill: #e8c060;
+  --menu-bg: #100c08;
+  --menu-fg: #f0d8a0;
+  --menu-hot-bg: #3a2a12;
+  --menu-hot-fg: #fff0c0;
+  --font-lcd: Consolas;
+  --font-ui: "Segoe UI";
+  --font-track: "Times New Roman";
+  --font-title: "Times New Roman";
+}
+
+[data-role="main.window"] {
+  width: 1280px;
+  height: 539px;
+  background-image: url(windows/main_clean.jpg);
+  left: 0px;
+  top: 0px;
+  --board: 0px 0px 0px 0px;
+  --corner-radius: 20px;
+  background-color: #0a0806;
+  --lua-ui-script: lua/autumn_leaves.lua;
+}
+
+[data-role="main.close"] {
+  left: 1232px;
+  top: 14px;
+  width: 36px;
+  height: 36px;
+  background-image: url(buttons/win_close/normal.png);
+  --parent: main.window;
+}
+[data-role="main.close"]:hover {
+ background-image: url(buttons/win_close/hover.png);
+}
+[data-role="main.close"]:active {
+ background-image: url(buttons/win_close/pressed.png);
+}
+
+[data-role="main.min"] {
+  left: 1188px;
+  top: 14px;
+  width: 36px;
+  height: 36px;
+  background-image: url(buttons/win_min/normal.png);
+  --parent: main.window;
+}
+[data-role="main.min"]:hover {
+ background-image: url(buttons/win_min/hover.png);
+}
+[data-role="main.min"]:active {
+ background-image: url(buttons/win_min/pressed.png);
+}
+
+
+[data-role="main.decor"] {
+  left: 281px;
+  top: 7px;
+  width: 360px;
+  height: 120px;
+  background-image: url(decor/title_logo.png);
+  --parent: main.window;
+}
+[data-role="main.cover"] {
+  left: 55px;
+  top: 20px;
+  width: 220px;
+  height: 220px;
+  color: #c8c8c800;
+  --spin-speed: 1rpm;
+  --parent: main.window;
+  --cover-shape: circle;
+}
+[data-role="cover.placeholder"] {
+  left: 0px;
+  top: 0px;
+  width: 200px;
+  height: 240px;
+  background-image: url(icons/cover_placeholder.png);
+}
+
+[data-role="main.track"] {
+  left: 290px;
+  top: 126px;
+  width: 500px;
+  height: 36px;
+  color: #f5e0b0;
+  font-family: "Times New Roman";
+  font-size: 26px;
+  text-align: left;
+  vertical-align: middle;
+  --parent: main.window;
+}
+
+[data-role="main.lcd"] {
+  left: 290px;
+  top: 166px;
+  width: 100px;
+  height: 50px;
+  color: #f0d8a0;
+  font-family: "Consolas";
+  font-size: 22px;
+  --parent: main.window;
+}
+[data-role="main.lcd.digit-0"] { background-image: url(lcd/digit_0.png); width: 22px; height: 36px; }
+[data-role="main.lcd.digit-1"] { background-image: url(lcd/digit_1.png); width: 22px; height: 36px; }
+[data-role="main.lcd.digit-2"] { background-image: url(lcd/digit_2.png); width: 22px; height: 36px; }
+[data-role="main.lcd.digit-3"] { background-image: url(lcd/digit_3.png); width: 22px; height: 36px; }
+[data-role="main.lcd.digit-4"] { background-image: url(lcd/digit_4.png); width: 22px; height: 36px; }
+[data-role="main.lcd.digit-5"] { background-image: url(lcd/digit_5.png); width: 22px; height: 36px; }
+[data-role="main.lcd.digit-6"] { background-image: url(lcd/digit_6.png); width: 22px; height: 36px; }
+[data-role="main.lcd.digit-7"] { background-image: url(lcd/digit_7.png); width: 22px; height: 36px; }
+[data-role="main.lcd.digit-8"] { background-image: url(lcd/digit_8.png); width: 22px; height: 36px; }
+[data-role="main.lcd.digit-9"] { background-image: url(lcd/digit_9.png); width: 22px; height: 36px; }
+[data-role="main.lcd.digit-colon"] { background-image: url(lcd/digit_colon.png); width: 12px; height: 36px; }
+[data-role="main.lcd.digit-dash"] { background-image: url(lcd/digit_dash.png); width: 22px; height: 36px; }
+[data-role="main.lcd.digit-blank"] { background-image: url(lcd/digit_blank.png); width: 22px; height: 36px; }
+[data-role="main.stream"] {
+  left: 402px;
+  top: 180px;
+  width: 400px;
+  height: 22px;
+  color: #c8b070;
+  font-family: "Consolas";
+  font-size: 18px;
+  --gap: 12px;
+  --parent: main.window;
+}
+
+[data-role="main.format"] {
+  left: 290px;
+  top: 219px;
+  width: 400px;
+  height: 22px;
+  color: #c8b070;
+  font-family: "Consolas";
+  font-size: 18px;
+  text-align: left;
+  --parent: main.window;
+}
+
+[data-role="main.vis"] {
+  left: 55px;
+  top: 245px;
+  width: 670px;
+  height: 115px;
+  color: #ffe0a0;
+  --color-vis-edge: #d4a040;
+  --parent: main.window;
+}
+[data-role="main.seek"] {
+  left: 48px;
+  top: 365px;
+  width: 1184px;
+  height: 22px;
+  --parent: main.window;
+}
+[data-role="main.seek.track"] {
+ background-image: url(sliders/seek_track.png);
+}
+[data-role="main.seek.fill"] {
+ background-image: url(sliders/seek_fill.png);
+}
+[data-role="main.seek.thumb"] {
+  width: 45px;
+  height: 45px;
+  background-image: url(sliders/seek_thumb/normal.png);
+}
+[data-role="main.seek.thumb"]:active {
+ background-image: url(sliders/seek_thumb/pressed.png);
+}
+
+[data-role="main.prev"] {
+  left: 48px;
+  top: 415px;
+  width: 72px;
+  height: 72px;
+  background-image: url(buttons/transport_prev/normal.png);
+  --parent: main.window;
+}
+[data-role="main.prev"]:hover {
+ background-image: url(buttons/transport_prev/hover.png);
+}
+[data-role="main.prev"]:active {
+ background-image: url(buttons/transport_prev/pressed.png);
+}
+
+[data-role="main.pause"] {
+  left: 128px;
+  top: 390px;
+  width: 120px;
+  height: 120px;
+  background-image: url(buttons/transport_pause/normal.png);
+  --parent: main.window;
+}
+[data-role="main.pause"]:hover {
+ background-image: url(buttons/transport_pause/hover.png);
+}
+[data-role="main.pause"]:active {
+ background-image: url(buttons/transport_pause/pressed.png);
+}
+
+[data-role="main.play"] {
+  left: 128px;
+  top: 390px;
+  width: 120px;
+  height: 120px;
+  background-image: url(buttons/transport_play/normal.png);
+  --parent: main.window;
+}
+[data-role="main.play"]:hover {
+ background-image: url(buttons/transport_play/hover.png);
+}
+[data-role="main.play"]:active {
+ background-image: url(buttons/transport_play/pressed.png);
+}
+
+[data-role="main.stop"] {
+  left: 256px;
+  top: 415px;
+  width: 72px;
+  height: 72px;
+  background-image: url(buttons/transport_stop/normal.png);
+  --parent: main.window;
+}
+[data-role="main.stop"]:hover {
+ background-image: url(buttons/transport_stop/hover.png);
+}
+[data-role="main.stop"]:active {
+ background-image: url(buttons/transport_stop/pressed.png);
+}
+
+[data-role="main.next"] {
+  left: 348px;
+  top: 415px;
+  width: 72px;
+  height: 72px;
+  background-image: url(buttons/transport_next/normal.png);
+  --parent: main.window;
+}
+[data-role="main.next"]:hover {
+ background-image: url(buttons/transport_next/hover.png);
+}
+[data-role="main.next"]:active {
+ background-image: url(buttons/transport_next/pressed.png);
+}
+[data-role="main.volume_icon"] {
+  left: 466px;
+  top: 434px;
+  width: 28px;
+  height: 28px;
+  background-image: url(decor/volume_icon.png);
+  --parent: main.window;
+}
+
+[data-role="main.volume"] {
+  left: 512px;
+  top: 438px;
+  width: 240px;
+  height: 18px;
+  --parent: main.window;
+}
+[data-role="main.volume.track"] {
+ background-image: url(sliders/volume_track.png);
+}
+[data-role="main.volume.fill"] {
+ background-image: url(sliders/volume_fill.png);
+}
+[data-role="main.volume.thumb"] {
+  width: 45px;
+  height: 45px;
+  background-image: url(sliders/volume_thumb/normal.png);
+}
+[data-role="main.volume.thumb"]:active {
+ background-image: url(sliders/volume_thumb/pressed.png);
+}
+
+[data-role="main.chip_eq"] {
+  left: 1100px;
+  top: 420px;
+  width: 56px;
+  height: 56px;
+  background-image: url(buttons/chip_eq/normal.png);
+  --parent: main.window;
+}
+[data-role="main.chip_eq"]:hover {
+ background-image: url(buttons/chip_eq/hover.png);
+}
+[data-role="main.chip_eq"]:active {
+ background-image: url(buttons/chip_eq/pressed.png);
+}
+[data-role="main.chip_eq"]:checked {
+ background-image: url(buttons/chip_eq/checked.png);
+}
+
+[data-role="main.chip_pl"] {
+  left: 1170px;
+  top: 420px;
+  width: 56px;
+  height: 56px;
+  background-image: url(buttons/chip_pl/normal.png);
+  --parent: main.window;
+}
+[data-role="main.chip_pl"]:hover {
+ background-image: url(buttons/chip_pl/hover.png);
+}
+[data-role="main.chip_pl"]:active {
+ background-image: url(buttons/chip_pl/pressed.png);
+}
+[data-role="main.chip_pl"]:checked {
+ background-image: url(buttons/chip_pl/checked.png);
+}
+
+[data-role="playlist.window"] {
+  width: 1280px;
+  height: 669px;
+  background-image: url(windows/playlist_clean.jpg);
+  --board: 0px 0px 0px 0px;
+  --corner-radius: 20px;
+  background-color: #100c08;
+  left: 0px;
+  top: 0px;
+}[data-role="playlist.library"] {
+  left: 20px;
+  top: 44px;
+  width: 400px;
+  height: 610px;
+  color: #e0d0a8;
+  --title-sel-color: #fff8e0;
+  --row-height: 120px;
+  font-family: "Segoe UI";
+  font-size: 20px;
+  color: #e0d0a8;
+  --row-sel-bg: #725230;
+  --scrollbar-track: #725230;
+  --scrollbar-thumb: #dbaa52;
+  --scrollbar-thumb-hover: #dbaa52;
+  --avatar-size: 96px;
+  --cover-shape: circle;
+  --parent: playlist.window;
+  --flex-y: grow;
+  --flex-x: grow;
+  background-color: #1a140e00;
+}
+[data-role="playlist.splitter"] {
+  left: 424px;
+  top: 44px;
+  width: 6px;
+  height: 580px;
+  background-color: #e8c87866;
+  --direction: vertical;
+  --parent: playlist.window;
+  --flex-y: grow;
+}
+[data-role="playlist.list"] {
+  left: 434px;
+  top: 44px;
+  width: 830px;
+  height: 610px;
+  color: #e0d0a8;
+  --title-sel-color: #fff8e0;
+  --duration-color: #a89058;
+  --row-height: 55px;
+  font-family: "Segoe UI";
+  font-size: 21px;
+  color: #e0d0a8;
+  --list-bg: #1a140e00;
+  --row-sel-bg: #725230;
+  --scrollbar-track: #725230;
+  --scrollbar-thumb: #dbaa52;
+  --scrollbar-thumb-hover: #dbaa52;
+  --parent: playlist.window;
+  --flex-y: grow;
+  --flex-x: grow;
+  --flex-group-y: 2;
+}
+[data-role="playlist.close"] {
+  left: -15px;
+  top: 7px;
+  width: 36px;
+  height: 36px;
+  background-image: url(buttons/win_close/normal.png);
+  --pin: 1 0;
+  --origin: 1 0;
+  --parent: playlist.window;
+}
+[data-role="playlist.close"]:active {
+  background-image: url(buttons/win_close/pressed.png);
+}
+
+[data-role="playlist.close"]:hover {
+ background-image: url(buttons/win_close/hover.png);
+}
+[data-role="main.play_mode"] {
+  left: 1017px;
+  top: 424px;
+  width: 50px;
+  height: 50px;
+  background-image: url(edited/main_play_mode/sequential.png);
+  --parent: main.window;
+}
+[data-role="main.play_mode"]:sequential {
+  background-image: url(edited/main_play_mode/sequential.png);
+}
+[data-role="main.play_mode"]:loop-all {
+  background-image: url(edited/main_play_mode/loop_all.png);
+}
+[data-role="main.play_mode"]:shuffle {
+  background-image: url(edited/main_play_mode/shuffle.png);
+}
+[data-role="main.play_mode"]:loop-one {
+  background-image: url(edited/main_play_mode/loop_one.png);
+}
+

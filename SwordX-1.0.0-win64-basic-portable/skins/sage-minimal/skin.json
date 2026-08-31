@@ -1,0 +1,61 @@
+{
+  "format": "wxh-skin/1",
+  "id": "sage-minimal",
+  "title": "Sage Minimal",
+  "stylesheet": "theme.css",
+  "roles": [
+    { "id": "main.window", "kind": "window", "action": null },
+    { "id": "main.title", "kind": "part", "action": null },
+    { "id": "main.track", "kind": "part", "action": null },
+    { "id": "main.stream", "kind": "part", "action": null },
+    { "id": "main.format", "kind": "part", "action": null },
+    { "id": "main.play_state", "kind": "play-state", "action": null },
+    { "id": "main.close", "kind": "button", "action": "window.close" },
+    { "id": "main.min", "kind": "button", "action": "window.min" },
+    { "id": "main.menu", "kind": "button", "action": "window.menu" },
+    { "id": "main.stop", "kind": "button", "action": "transport.stop" },
+    { "id": "main.prev", "kind": "button", "action": "transport.prev" },
+    { "id": "main.pause", "kind": "button", "action": "transport.play_pause" },
+    { "id": "main.next", "kind": "button", "action": "transport.next" },
+    { "id": "main.play", "kind": "button", "action": "transport.play_pause" },
+    {
+      "id": "main.seek",
+      "kind": "hslider",
+      "action": "transport.seek",
+      "parts": { "track": "main.seek.track", "fill": "main.seek.fill", "thumb": "main.seek.thumb" }
+    },
+    {
+      "id": "main.volume",
+      "kind": "hslider",
+      "action": "transport.volume",
+      "parts": { "track": "main.volume.track", "fill": "main.volume.fill", "thumb": "main.volume.thumb" }
+    },
+    { "id": "main.volume_icon", "kind": "decoration", "action": null },
+    { "id": "main.chip_pl", "kind": "toggle", "action": "window.toggle_playlist" },
+    { "id": "main.chip_eq", "kind": "toggle", "action": "window.toggle_eq" },
+    { "id": "main.vis", "kind": "toggle", "action": "vis.toggle" },
+    { "id": "main.play_mode", "kind": "play-mode", "action": "mode.cycle" },
+    { "id": "main.lyrics", "kind": "part", "action": null },
+    { "id": "main.cover", "kind": "part", "action": null },
+    { "id": "cover.placeholder", "kind": "part", "action": null },
+    { "id": "main.duration", "kind": "duration-info", "action": null },
+    { "id": "playlist.window", "kind": "window", "action": null },
+    {
+      "id": "playlist.library",
+      "kind": "list",
+      "action": "playlist.browse"
+    },
+    {
+      "id": "playlist.splitter",
+      "kind": "separator",
+      "action": null,
+      "parts": { "before": "playlist.library", "after": "playlist.list" }
+    },
+    {
+      "id": "playlist.list",
+      "kind": "list",
+      "action": "playlist.select",
+      "parts": { "rowSelected": "playlist.row_selected" }
+    }
+  ]
+}

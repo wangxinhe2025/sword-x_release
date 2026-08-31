@@ -1,0 +1,70 @@
+{
+  "format": "wxh-skin/1",
+  "id": "shenjian-modern-blue",
+  "title": "SHENJIAN",
+  "stylesheet": "theme.css",
+  "roles": [
+    { "id": "main.window", "kind": "window", "action": null },
+    { "id": "main.region.transport", "kind": "region", "action": null },
+    { "id": "main.lcd", "kind": "digit-clock", "action": null },
+    { "id": "main.track", "kind": "part", "action": null },
+    { "id": "main.stream", "kind": "part", "action": null },
+    { "id": "main.format", "kind": "part", "action": null },
+    { "id": "main.duration", "kind": "duration-info", "action": null },
+    { "id": "main.play_state", "kind": "play-state", "action": null },
+    { "id": "main.close", "kind": "button", "action": "window.close" },
+    { "id": "main.min", "kind": "button", "action": "window.min" },
+    { "id": "main.menu", "kind": "button", "action": "window.menu" },
+    { "id": "main.prev", "kind": "button", "action": "transport.prev" },
+    { "id": "main.play", "kind": "button", "action": "transport.play_pause" },
+    { "id": "main.pause", "kind": "button", "action": "transport.play_pause" },
+    { "id": "main.stop", "kind": "button", "action": "transport.stop" },
+    { "id": "main.next", "kind": "button", "action": "transport.next" },
+    {
+      "id": "main.seek",
+      "kind": "hslider",
+      "action": "transport.seek",
+      "parts": { "track": "main.seek.track", "fill": "main.seek.fill", "thumb": "main.seek.thumb" }
+    },
+    {
+      "id": "main.volume",
+      "kind": "hslider",
+      "action": "transport.volume",
+      "parts": { "track": "main.volume.track", "fill": "main.volume.fill", "thumb": "main.volume.thumb" }
+    },
+    { "id": "main.chip_pl", "kind": "toggle", "action": "window.toggle_playlist" },
+    { "id": "main.vis", "kind": "toggle", "action": "vis.toggle" },
+    { "id": "main.shuffle", "kind": "led", "action": "mode.shuffle" },
+    { "id": "main.repeat", "kind": "led", "action": "mode.repeat" },
+    { "id": "main.play_mode", "kind": "play-mode", "action": "mode.cycle" },
+    { "id": "playlist.window", "kind": "window", "action": null },
+    {
+      "id": "playlist.library",
+      "kind": "list",
+      "action": "playlist.browse"
+    },
+    {
+      "id": "playlist.splitter",
+      "kind": "separator",
+      "action": null,
+      "parts": { "before": "playlist.library", "after": "playlist.list" }
+    },
+    {
+      "id": "playlist.list",
+      "kind": "list",
+      "action": "playlist.select",
+      "parts": { "rowSelected": "playlist.row_selected" }
+    },
+    { "id": "playlist.close", "kind": "button", "action": "window.toggle_playlist" },
+    { "id": "eq.window", "kind": "window", "action": null },
+    { "id": "eq.on", "kind": "toggle", "action": "eq.enable" },
+    { "id": "eq.presets", "kind": "button", "action": "eq.presets" },
+    { "id": "eq.close", "kind": "button", "action": "window.toggle_eq" },
+    {
+      "id": "eq.bands",
+      "kind": "vslider-bank",
+      "action": "eq.band",
+      "parts": { "slot": "eq.slot", "fill": "eq.fill", "thumb": "eq.thumb" }
+    }
+  ]
+}

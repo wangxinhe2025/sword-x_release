@@ -1,0 +1,552 @@
+/* wxh-skin/1 â?? One Winged
+ * Obsidian, engraved silver and restrained amethyst light.
+ * The main and playlist windows are separate so the skin keeps native docking.
+ */
+:root {
+  --color-accent: #a98add;
+  --color-vis: #b9a7e6;
+  --color-vis-edge: #e2def0;
+  --color-vis-peak: #cbb2f3;
+  --color-lcd-fg: #dedce7;
+  --color-lcd-dim: #777887;
+  --color-track: #eeeaf3;
+  --color-list-text: #c7c4cf;
+  --color-list-sel-text: #f4effb;
+  --color-list-duration: #8e8b98;
+  --color-list-duration-sel: #cdb4f2;
+  --color-list-sel-bg: #654a8845;
+  --color-fill: #a98add;
+  --menu-bg: #0a0a0f;
+  --menu-fg: #dedce7;
+  --font-lcd: "Georgia";
+  --font-ui: "Segoe UI";
+  --font-track: "Georgia";
+  --font-title: "Georgia";
+  --menu-bg-image: url(menu/menuback.png);
+}
+
+/* ===== Main window (1229 x 530) ===== */
+[data-role="main.window"] {
+  left: 0px;
+  top: 0px;
+  width: 1229px;
+  height: 530px;
+  background-image: url(windows/main_one_winged.png);
+  background-color: #07070a;
+  --board: 0px 0px 0px 0px;
+  --corner-radius: 12px;
+}
+
+[data-role="main.title"] {
+  left: 440px;
+  top: 16px;
+  width: 370px;
+  height: 38px;
+  color: #e5e2eb;
+  font-family: "Georgia";
+  font-size: 25px;
+  text-align: center;
+  vertical-align: middle;
+  content: "SWORD-X";
+  --parent: main.window;
+}
+
+[data-role="main.cover"] {
+  left: 61px;
+  top: 79px;
+  width: 300px;
+  height: 300px;
+  background-image: url(windows/default_one_winged.png);
+  background-color: #050509;
+  --cover-shape: circle;
+  --parent: main.window;
+  --spin-speed: 1rpm;
+  --spin-when: never;
+}
+
+[data-role="cover.placeholder"] {
+  width: 300px;
+  height: 300px;
+  background-image: url(windows/default_one_winged.png);
+  background-color: #050509;
+}
+
+[data-role="main.track"] {
+  left: 388px;
+  top: 79px;
+  width: 498px;
+  height: 71px;
+  color: #eeeaf3;
+  font-family: "Georgia";
+  font-size: 37px;
+  text-align: center;
+  vertical-align: middle;
+  --lyrics: 0;
+  --parent: main.window;
+}
+
+[data-role="main.stream"] {
+  left: 475px;
+  top: 173px;
+  width: 330px;
+  height: 24px;
+  color: #aaa7b4;
+  font-family: "Georgia";
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
+  --parent: main.window;
+}
+
+[data-role="main.play_state"] {
+  left: 447px;
+  top: 177px;
+  width: 18px;
+  height: 18px;
+  background-image: url(leds/play_state/stopped.png);
+  --parent: main.window;
+}
+[data-role="main.play_state"]:playing {
+ background-image: url(leds/play_state/playing.png);
+}
+[data-role="main.play_state"]:paused {
+ background-image: url(leds/play_state/paused.png);
+}
+[data-role="main.play_state"]:stopped {
+ background-image: url(leds/play_state/stopped.png);
+}
+
+[data-role="main.lyrics"] {
+  left: 899px;
+  top: 136px;
+  width: 310px;
+  height: 221px;
+  color: #8f8c9b;
+  --active-color: #cbb2f3;
+  --karaoke-fill: #eee7fb;
+  background-color: #00000000;
+  font-family: "Times New Roman";
+  font-size: 17px;
+  --lyrics-active-size: 21px;
+  --line-height: 44px;
+  text-align: center;
+  vertical-align: middle;
+  --lyrics-fade-min: 0;
+  --lyrics-fade-range: 10;
+  --lyrics-drag: 0;
+  --lyrics-nudge-side: right;
+  --parent: main.window;
+}
+
+[data-role="main.lcd"] {
+  left: 423px;
+  top: 214px;
+  width: 420px;
+  height: 68px;
+  color: #dedce7;
+  font-family: "Georgia";
+  font-size: 54px;
+  text-align: center;
+  vertical-align: middle;
+  --display: font;
+  --parent: main.window;
+}
+
+[data-role="main.lcd.digit-0"] { background-image: url(lcd/digit_0.png); width: 26px; height: 40px; }
+[data-role="main.lcd.digit-1"] { background-image: url(lcd/digit_1.png); width: 26px; height: 40px; }
+[data-role="main.lcd.digit-2"] { background-image: url(lcd/digit_2.png); width: 26px; height: 40px; }
+[data-role="main.lcd.digit-3"] { background-image: url(lcd/digit_3.png); width: 26px; height: 40px; }
+[data-role="main.lcd.digit-4"] { background-image: url(lcd/digit_4.png); width: 26px; height: 40px; }
+[data-role="main.lcd.digit-5"] { background-image: url(lcd/digit_5.png); width: 26px; height: 40px; }
+[data-role="main.lcd.digit-6"] { background-image: url(lcd/digit_6.png); width: 26px; height: 40px; }
+[data-role="main.lcd.digit-7"] { background-image: url(lcd/digit_7.png); width: 26px; height: 40px; }
+[data-role="main.lcd.digit-8"] { background-image: url(lcd/digit_8.png); width: 26px; height: 40px; }
+[data-role="main.lcd.digit-9"] { background-image: url(lcd/digit_9.png); width: 26px; height: 40px; }
+[data-role="main.lcd.digit-colon"] { background-image: url(lcd/digit_colon.png); width: 14px; height: 40px; }
+[data-role="main.lcd.digit-dash"] { background-image: url(lcd/digit_dash.png); width: 26px; height: 40px; }
+[data-role="main.lcd.digit-blank"] { background-image: url(lcd/digit_blank.png); width: 26px; height: 40px; }
+
+[data-role="main.vis"] {
+  left: 390px;
+  top: 299px;
+  width: 510px;
+  height: 58px;
+  color: #b9a7e6;
+  --color-vis-edge: #e2def0;
+  --parent: main.window;
+}
+
+[data-role="main.seek"] {
+  left: 390px;
+  top: 373px;
+  width: 505px;
+  height: 4px;
+  --parent: main.window;
+  --use-own-opacity: 1;
+}
+[data-role="main.seek.track"] {
+ background-image: url(sliders/seek_track.png);
+}
+[data-role="main.seek.fill"] {
+ background-image: url(sliders/seek_fill.png);
+}
+[data-role="main.seek.thumb"] {
+  width: 22px;
+  height: 22px;
+  background-image: url(sliders/seek_thumb/normal.png);
+}
+[data-role="main.seek.thumb"]:hover {
+ background-image: url(sliders/seek_thumb/hover.png);
+}
+[data-role="main.seek.thumb"]:active {
+ background-image: url(sliders/seek_thumb/pressed.png);
+}
+
+/* Engraved transport controls. Every PNG matches its declared size. */
+[data-role="main.stop"] {
+  left: 406px;
+  top: 396px;
+  width: 46px;
+  height: 46px;
+  background-image: url(buttons/transport_stop/normal.png);
+  --hover-breathe: 1;
+  --parent: main.window;
+}
+[data-role="main.stop"]:hover {
+ background-image: url(buttons/transport_stop/hover.png);
+}
+[data-role="main.stop"]:active {
+ background-image: url(buttons/transport_stop/pressed.png);
+}
+
+[data-role="main.prev"] {
+  left: 470px;
+  top: 391px;
+  width: 90px;
+  height: 56px;
+  background-image: url(buttons/transport_prev/normal.png);
+  --hover-breathe: 1;
+  --parent: main.window;
+}
+[data-role="main.prev"]:hover {
+ background-image: url(buttons/transport_prev/hover.png);
+}
+[data-role="main.prev"]:active {
+ background-image: url(buttons/transport_prev/pressed.png);
+}
+
+[data-role="main.pause"] {
+  left: 580px;
+  top: 386px;
+  width: 108px;
+  height: 66px;
+  background-image: url(buttons/transport_pause/normal.png);
+  --hover-breathe: 1;
+  --parent: main.window;
+}
+[data-role="main.pause"]:hover {
+ background-image: url(buttons/transport_pause/hover.png);
+}
+[data-role="main.pause"]:active {
+ background-image: url(buttons/transport_pause/pressed.png);
+}
+
+[data-role="main.play"] {
+  left: 580px;
+  top: 386px;
+  width: 108px;
+  height: 66px;
+  background-image: url(buttons/transport_play/normal.png);
+  --hover-breathe: 1;
+  --parent: main.window;
+}
+[data-role="main.play"]:hover {
+ background-image: url(buttons/transport_play/hover.png);
+}
+[data-role="main.play"]:active {
+ background-image: url(buttons/transport_play/pressed.png);
+}
+
+[data-role="main.next"] {
+  left: 708px;
+  top: 391px;
+  width: 90px;
+  height: 56px;
+  background-image: url(buttons/transport_next/normal.png);
+  --hover-breathe: 1;
+  --parent: main.window;
+}
+[data-role="main.next"]:hover {
+ background-image: url(buttons/transport_next/hover.png);
+}
+[data-role="main.next"]:active {
+ background-image: url(buttons/transport_next/pressed.png);
+}
+
+[data-role="main.play_mode"] {
+  left: 312px;
+  top: 396px;
+  width: 80px;
+  height: 46px;
+  background-image: url(edited/main_play_mode/sequential.png);
+  --parent: main.window;
+}
+[data-role="main.play_mode"]:sequential {
+ background-image: url(edited/main_play_mode/sequential.png);
+}
+[data-role="main.play_mode"]:loop-all {
+ background-image: url(edited/main_play_mode/loop_all.png);
+}
+[data-role="main.play_mode"]:shuffle {
+ background-image: url(edited/main_play_mode/shuffle.png);
+}
+[data-role="main.play_mode"]:loop-one {
+ background-image: url(edited/main_play_mode/loop_one.png);
+}
+
+[data-role="main.chip_eq"] {
+  left: 820px;
+  top: 396px;
+  width: 46px;
+  height: 46px;
+  background-image: url(buttons/chip_eq/normal.png);
+  --hover-breathe: 1;
+  --parent: main.window;
+}
+[data-role="main.chip_eq"]:hover {
+ background-image: url(buttons/chip_eq/hover.png);
+}
+[data-role="main.chip_eq"]:active {
+ background-image: url(buttons/chip_eq/pressed.png);
+}
+[data-role="main.chip_eq"]:checked {
+ background-image: url(buttons/chip_eq/checked.png);
+}
+
+[data-role="main.chip_pl"] {
+  left: 880px;
+  top: 396px;
+  width: 46px;
+  height: 46px;
+  background-image: url(buttons/chip_pl/normal.png);
+  --hover-breathe: 1;
+  --parent: main.window;
+}
+[data-role="main.chip_pl"]:hover {
+ background-image: url(buttons/chip_pl/hover.png);
+}
+[data-role="main.chip_pl"]:active {
+ background-image: url(buttons/chip_pl/pressed.png);
+}
+[data-role="main.chip_pl"]:checked {
+ background-image: url(buttons/chip_pl/checked.png);
+}
+
+[data-role="main.menu"] {
+  left: -82px;
+  top: 16px;
+  width: 30px;
+  height: 30px;
+  --pin: 1 0;
+  --origin: 1 0;
+  background-image: url(buttons/win_menu/normal.png);
+  --hover-breathe: 1;
+  --parent: main.window;
+}
+[data-role="main.menu"]:hover { background-image: url(buttons/win_menu/hover.png); }
+[data-role="main.menu"]:active { background-image: url(buttons/win_menu/pressed.png); }
+
+[data-role="main.min"] {
+  left: -46px;
+  top: 16px;
+  width: 30px;
+  height: 30px;
+  --pin: 1 0;
+  --origin: 1 0;
+  background-image: url(buttons/win_min/normal.png);
+  --hover-breathe: 1;
+  --parent: main.window;
+}
+[data-role="main.min"]:hover { background-image: url(buttons/win_min/hover.png); }
+[data-role="main.min"]:active { background-image: url(buttons/win_min/pressed.png); }
+
+[data-role="main.close"] {
+  left: -10px;
+  top: 16px;
+  width: 30px;
+  height: 30px;
+  --pin: 1 0;
+  --origin: 1 0;
+  background-image: url(buttons/win_close/normal.png);
+  --hover-breathe: 1;
+  --parent: main.window;
+}
+[data-role="main.close"]:hover { background-image: url(buttons/win_close/hover.png); }
+[data-role="main.close"]:active { background-image: url(buttons/win_close/pressed.png); }
+
+[data-role="main.format"] {
+  left: 55px;
+  top: 476px;
+  width: 340px;
+  height: 24px;
+  color: #898694;
+  font-family: "Segoe UI";
+  font-size: 14px;
+  text-align: left;
+  vertical-align: middle;
+  --parent: main.window;
+}
+
+[data-role="main.volume"] {
+  left: -60px;
+  top: 484px;
+  width: 160px;
+  height: 4px;
+  --pin: 1 0;
+  --origin: 1 0;
+  --parent: main.window;
+}
+[data-role="main.volume.track"] {
+ background-image: url(sliders/volume_track.png);
+}
+[data-role="main.volume.fill"] {
+ background-image: url(sliders/volume_fill.png);
+}
+[data-role="main.volume.thumb"] {
+  width: 20px;
+  height: 20px;
+  background-image: url(sliders/volume_thumb/normal.png);
+}
+[data-role="main.volume.thumb"]:active {
+ background-image: url(sliders/volume_thumb/pressed.png);
+}
+
+[data-role="main.volume_icon"] {
+  left: -237px;
+  top: 471px;
+  width: 32px;
+  height: 32px;
+  --pin: 1 0;
+  --origin: 1 0;
+  background-image: url(icons/speaker.png);
+  --parent: main.window;
+}
+
+/* ===== Playlist window (1229 x 730) ===== */
+[data-role="playlist.window"] {
+  left: 0px;
+  top: 0px;
+  width: 1229px;
+  height: 730px;
+  background-image: url(windows/playlist_one_winged.png);
+  background-color: #07070a;
+  --nine-slice: 430px 330px 210px 620px;
+  --board: 0px 0px 0px 0px;
+  --resizable: 1;
+  --corner-radius: 12px;
+  --nine-slice-tile: 1;
+}
+
+[data-role="playlist.label.library"] {
+  left: 20px;
+  top: -27px;
+  width: 200px;
+  height: 28px;
+  content: "skin.label.library";
+  color: #ded9e8;
+  font-family: "Georgia";
+  font-size: 18px;
+  text-align: left;
+  vertical-align: middle;
+  --flex-x: grow;
+  --parent: playlist.library;
+}
+
+[data-role="playlist.label.list"] {
+  left: 16px;
+  top: -27px;
+  width: 200px;
+  height: 28px;
+  content: "skin.label.tracks";
+  color: #ded9e8;
+  font-family: "Georgia";
+  font-size: 18px;
+  text-align: left;
+  vertical-align: middle;
+  --flex-x: grow;
+  --parent: playlist.list;
+}
+
+[data-role="playlist.library"] {
+  left: 30px;
+  top: 68px;
+  width: 324px;
+  height: 652px;
+  --flex-y: grow;
+  --row-height: 132px;
+  --scrollbar-width: 7px;
+  --scrollbar-track: #111119;
+  --scrollbar-thumb: #5e586d;
+  --scrollbar-thumb-hover: #a98add;
+  --title-sel-color: #f4effb;
+  --row-sel-bg: #654a8845;
+  color: #c7c4cf;
+  font-family: "Segoe UI";
+  font-size: 18px;
+  --avatar-size: 104px;
+  --parent: playlist.window;
+  background-color: #00000000;
+  --flex-x: grow;
+}
+
+[data-role="playlist.splitter"] {
+  left: 354px;
+  top: 68px;
+  width: 28px;
+  height: 652px;
+  background-image: url(playlist/splitter.png);
+  --direction: vertical;
+  --flex-y: grow;
+  --parent: playlist.window;
+}
+
+[data-role="playlist.list"] {
+  left: 382px;
+  top: 68px;
+  width: 807px;
+  height: 652px;
+  --flex-x: grow;
+  --flex-y: grow;
+  --flex-group-y: 2;
+  --row-height: 50px;
+  --scrollbar-width: 12px;
+  --scrollbar-track: #111119;
+  --scrollbar-thumb: #5e586d;
+  --scrollbar-thumb-hover: #a98add;
+  color: #c7c4cf;
+  font-family: "Segoe UI";
+  font-size: 19px;
+  --title-sel-color: #f4effb;
+  --duration-color: #8e8b98;
+  --duration-sel-color: #cdb4f2;
+  --row-sel-bg: #654a8845;
+  background-color: #00000000;
+  --parent: playlist.window;
+}
+
+[data-role="playlist.row_selected"] {
+  background-image: url(playlist/row_selected.png);
+}
+
+[data-role="playlist.close"] {
+  left: -10px;
+  top: 12px;
+  width: 30px;
+  height: 30px;
+  --pin: 1 0;
+  --origin: 1 0;
+  background-image: url(buttons/win_close/normal.png);
+  --parent: playlist.window;
+}
+[data-role="playlist.close"]:hover { background-image: url(buttons/win_close/hover.png); }
+[data-role="playlist.close"]:active { background-image: url(buttons/win_close/pressed.png); }
